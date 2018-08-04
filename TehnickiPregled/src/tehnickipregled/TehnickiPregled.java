@@ -19,8 +19,8 @@ public class TehnickiPregled extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
-        
+        Parent root = FXMLLoader.load(getClass().getResource("/view/MainFXML.fxml"));
+        stage.setTitle("Tehnički pregled vozila");
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
