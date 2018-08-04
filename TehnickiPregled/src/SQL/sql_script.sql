@@ -62,8 +62,8 @@ create table TEHNICKI_PREGLED
    ISPRAVNOST_VOZILA    varchar(10) not null,
    KONTROLNI_BROJ       varchar(10),
    DATUM_PREGLEDA       date not null,
-   POCETAK_PREGLEDA     timestamp not null,
-   ZAVRSETAK_PREGLEDA   timestamp not null,
+   POCETAK_PREGLEDA     varchar(15) not null,
+   ZAVRSETAK_PREGLEDA   varchar(15) not null,
    PODACI_O_NEISPRAVNOSTI varchar(256),
    primary key (TEHNICKI_PREGLED_ID)
 );
