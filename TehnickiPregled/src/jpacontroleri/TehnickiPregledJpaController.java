@@ -18,7 +18,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import jpacontroleri.exceptions.NonexistentEntityException;
-import jpacontroleri.exceptions.PreexistingEntityException;
 
 /**
  *
@@ -35,7 +34,7 @@ public class TehnickiPregledJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(TehnickiPregled tehnickiPregled) throws PreexistingEntityException, Exception {
+    public void create(TehnickiPregled tehnickiPregled) {
         if (tehnickiPregled.getGalerijaList() == null) {
             tehnickiPregled.setGalerijaList(new ArrayList<Galerija>());
         }
@@ -101,11 +100,6 @@ public class TehnickiPregledJpaController implements Serializable {
                 }
             }
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findTehnickiPregled(tehnickiPregled.getTehnickiPregledId()) != null) {
-                throw new PreexistingEntityException("TehnickiPregled " + tehnickiPregled + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();

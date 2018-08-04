@@ -18,7 +18,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import jpacontroleri.exceptions.NonexistentEntityException;
-import jpacontroleri.exceptions.PreexistingEntityException;
 
 /**
  *
@@ -35,7 +34,7 @@ public class VoziloJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Vozilo vozilo) throws PreexistingEntityException, Exception {
+    public void create(Vozilo vozilo) {
         if (vozilo.getTehnickiPregledList() == null) {
             vozilo.setTehnickiPregledList(new ArrayList<TehnickiPregled>());
         }
@@ -106,11 +105,6 @@ public class VoziloJpaController implements Serializable {
                 }
             }
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findVozilo(vozilo.getVoziloId()) != null) {
-                throw new PreexistingEntityException("Vozilo " + vozilo + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();

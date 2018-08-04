@@ -17,7 +17,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import jpacontroleri.exceptions.NonexistentEntityException;
-import jpacontroleri.exceptions.PreexistingEntityException;
 
 /**
  *
@@ -34,7 +33,7 @@ public class KlijentJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Klijent klijent) throws PreexistingEntityException, Exception {
+    public void create(Klijent klijent) {
         if (klijent.getVoziloList() == null) {
             klijent.setVoziloList(new ArrayList<Vozilo>());
         }
@@ -68,11 +67,6 @@ public class KlijentJpaController implements Serializable {
                 }
             }
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findKlijent(klijent.getKlijentiId()) != null) {
-                throw new PreexistingEntityException("Klijent " + klijent + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();
