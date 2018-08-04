@@ -17,7 +17,7 @@ drop table if exists VOZILO;
 /*==============================================================*/
 create table GALERIJA
 (
-   GALERIJA_ID          int not null,
+   GALERIJA_ID          int  NOT NULL AUTO_INCREMENT ,
    TEHNICKI_PREGLED_ID  int,
    SLIKA                longblob not null,
    primary key (GALERIJA_ID)
@@ -28,7 +28,7 @@ create table GALERIJA
 /*==============================================================*/
 create table KLIJENT
 (
-   KLIJENTI_ID          int not null,
+   KLIJENTI_ID          int  NOT NULL AUTO_INCREMENT ,
    VOZILO_ID            int,
    IME                  varchar(25) not null,
    PREZIME              varchar(25) not null,
@@ -45,7 +45,7 @@ create table KLIJENT
 /*==============================================================*/
 create table TEHNICKI_PREGLED
 (
-   TEHNICKI_PREGLED_ID  int not null,
+   TEHNICKI_PREGLED_ID  int  NOT NULL AUTO_INCREMENT ,
    GALERIJA_ID          int,
    VOZILO_ID            int,
    NAZIV_FIRME          varchar(25) not null,
@@ -73,7 +73,7 @@ create table TEHNICKI_PREGLED
 /*==============================================================*/
 create table VOZILO
 (
-   VOZILO_ID            int not null,
+   VOZILO_ID            int  NOT NULL AUTO_INCREMENT ,
    TEHNICKI_PREGLED_ID  int,
    KLIJENTI_ID          int,
    MARKA_VOZILA         varchar(25) not null,
