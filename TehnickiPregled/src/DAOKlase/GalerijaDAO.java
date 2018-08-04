@@ -1,6 +1,6 @@
 package DAOKlase;
 
-import controleri.GalerijaJpaController;
+import jpacontroleri.GalerijaJpaController;
 import entiteti.Galerija;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;

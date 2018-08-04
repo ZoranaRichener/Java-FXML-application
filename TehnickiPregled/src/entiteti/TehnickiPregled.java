@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author milan
+ * @author Owner
  */
 @Entity
 @Table(name = "tehnicki_pregled")
@@ -101,12 +101,10 @@ public class TehnickiPregled implements Serializable {
     private Date datumPregleda;
     @Basic(optional = false)
     @Column(name = "POCETAK_PREGLEDA")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date pocetakPregleda;
+    private String pocetakPregleda;
     @Basic(optional = false)
     @Column(name = "ZAVRSETAK_PREGLEDA")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date zavrsetakPregleda;
+    private String zavrsetakPregleda;
     @Column(name = "PODACI_O_NEISPRAVNOSTI")
     private String podaciONeispravnosti;
     @OneToMany(mappedBy = "tehnickiPregledId")
@@ -127,7 +125,7 @@ public class TehnickiPregled implements Serializable {
         this.tehnickiPregledId = tehnickiPregledId;
     }
 
-    public TehnickiPregled(Integer tehnickiPregledId, String nazivFirme, String sedisteFirme, String sifraTehnickogPregleda, String kontrolor1, String kontrolor2, String usloviZaVrsenjePregleda, String mestoVrsenjaPregleda, String vrstaPregleda, String redniBroj, String idBroj, String vrstaVozila, String ispravnostVozila, Date datumPregleda, Date pocetakPregleda, Date zavrsetakPregleda) {
+    public TehnickiPregled(Integer tehnickiPregledId, String nazivFirme, String sedisteFirme, String sifraTehnickogPregleda, String kontrolor1, String kontrolor2, String usloviZaVrsenjePregleda, String mestoVrsenjaPregleda, String vrstaPregleda, String redniBroj, String idBroj, String vrstaVozila, String ispravnostVozila, Date datumPregleda, String pocetakPregleda, String zavrsetakPregleda) {
         this.tehnickiPregledId = tehnickiPregledId;
         this.nazivFirme = nazivFirme;
         this.sedisteFirme = sedisteFirme;
@@ -266,19 +264,19 @@ public class TehnickiPregled implements Serializable {
         this.datumPregleda = datumPregleda;
     }
 
-    public Date getPocetakPregleda() {
+    public String getPocetakPregleda() {
         return pocetakPregleda;
     }
 
-    public void setPocetakPregleda(Date pocetakPregleda) {
+    public void setPocetakPregleda(String pocetakPregleda) {
         this.pocetakPregleda = pocetakPregleda;
     }
 
-    public Date getZavrsetakPregleda() {
+    public String getZavrsetakPregleda() {
         return zavrsetakPregleda;
     }
 
-    public void setZavrsetakPregleda(Date zavrsetakPregleda) {
+    public void setZavrsetakPregleda(String zavrsetakPregleda) {
         this.zavrsetakPregleda = zavrsetakPregleda;
     }
 
