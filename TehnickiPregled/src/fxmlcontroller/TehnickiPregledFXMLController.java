@@ -1,12 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fxmlcontroller;
 
+import DAOKlase.TehnickiPregledDAO;
+import entiteti.TehnickiPregled;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
@@ -23,8 +28,8 @@ import javafx.scene.layout.VBox;
  * @author Lenovo
  */
 public class TehnickiPregledFXMLController implements Initializable {
-    
-      @FXML
+
+    @FXML
     private TextField txtNaziv_firme;
 
     @FXML
@@ -62,13 +67,13 @@ public class TehnickiPregledFXMLController implements Initializable {
 
     @FXML
     private TextField txtIspravnostVozila;
-    
-//dugme na koje se pamte svi podaci o vozilu,klijentima ,tehnickom pregledu i eventualno i slike kasnije
+
+    //dugme na koje se pamte svi podaci o vozilu,klijentima ,tehnickom pregledu i eventualno i slike kasnije
     @FXML
     private Button btnSaveALL;
-    
+
     //dugme na koje pamtis samo podatke o tehnickom pregledu
-     @FXML
+    @FXML
     private Button btnSaveTehnickiPregled;
 
     @FXML
@@ -83,16 +88,87 @@ public class TehnickiPregledFXMLController implements Initializable {
     @FXML
     private TextArea txtPodaciOneispravnosti;
 
+    private final TehnickiPregledDAO tehnickiPregledDAO = new TehnickiPregledDAO();
+
     /**
      * Initializes the controller class.
      */
-    
-   
-     
-     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+
+        btnSaveTehnickiPregled.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+                if (!txtNaziv_firme.getText().trim().isEmpty()) {
+
+                   TehnickiPregled novitehPregled = new TehnickiPregled(getID());
+
+                   novitehPregled.setNazivFirme(txtNaziv_firme.getText());
+
+                   novitehPregled.setSedisteFirme(txtSediste_firme.getText());
+                   
+                   novitehPregled.setKontrolor1(txtKontroler_1.getText());
+                   
+                   novitehPregled.setKontrolor2(txtKontrolor_2.getText());
+                   
+                   novitehPregled.setSifraTehnickogPregleda(txtSifraTehnickogPregleda.getText());
+                   
+                   novitehPregled.setUsloviZaVrsenjePregleda(txtUsloviZaVrsenjePregleda.getText());
+                   
+                   novitehPregled.setMestoVrsenjaPregleda(txtMestoVrsenjaPregleda.getText());
+                   
+                   novitehPregled.setVrstaPregleda(txtVrstaPregleda.getText());
+                   
+                   novitehPregled.setRedniBroj(txtRedniBroj.getText());
+                   
+                   novitehPregled.setIdBroj(txtIDbroj.getText());
+                   
+                   novitehPregled.setVrstaVozila(txtVrstaVozila.getText());
+                   
+                   novitehPregled.setIspravnostVozila(txtIspravnostVozila.getText());
+                   
+                   
+                   LocalDate localDate = datePDatumPregleda.getValue();
+                   
+                   Date date1 = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+                   
+                   novitehPregled.setDatumPregleda(date1);
+                   
+                   novitehPregled.setPocetakPregleda(txtPocetakPregleda.getText());
+                   
+                   novitehPregled.setZavrsetakPregleda(txtZavrsetakPregleda.getText());
+                   
+                   novitehPregled.setPodaciONeispravnosti(txtPodaciOneispravnosti.getText());
+                   
+                  try {
+                        tehnickiPregledDAO.addTehnickiPregled(novitehPregled);
+                    } catch (Exception ex) {
+                        Logger.getLogger(TehnickiPregledFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }
+            }
+
+        });
+
+    }
+
+    private int getID() {
+
+        List<TehnickiPregled> allTehnickiPregled = tehnickiPregledDAO.getAllTehnickiPregled();
+
+        int maxID = 0;
+
+        if (allTehnickiPregled.isEmpty()) {
+
+            for (TehnickiPregled tehnicki : allTehnickiPregled) {
+                if (tehnicki.getTehnickiPregledId() > maxID) {
+                    maxID = tehnicki.getTehnickiPregledId();
+                }
+            }
+        }
+
+        return ++maxID;
+    }
 }
