@@ -1,6 +1,6 @@
 package DAOKlase;
 
-import controleri.TehnickiPregledJpaController;
+import jpacontroleri.TehnickiPregledJpaController;
 import entiteti.TehnickiPregled;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;

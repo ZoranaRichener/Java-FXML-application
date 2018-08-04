@@ -1,6 +1,6 @@
 package DAOKlase;
 
-import controleri.VoziloJpaController;
+import jpacontroleri.VoziloJpaController;
 import entiteti.Vozilo;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;

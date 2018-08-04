@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controleri;
+package jpacontroleri;
 
-import controleri.exceptions.NonexistentEntityException;
-import controleri.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
@@ -19,10 +17,12 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import jpacontroleri.exceptions.NonexistentEntityException;
+import jpacontroleri.exceptions.PreexistingEntityException;
 
 /**
  *
- * @author milan
+ * @author Owner
  */
 public class VoziloJpaController implements Serializable {
 
