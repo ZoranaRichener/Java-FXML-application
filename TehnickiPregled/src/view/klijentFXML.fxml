@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #AB5F61;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlcontroller.KlijentFXMLController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #AB5F61;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlcontroller.KlijentFXMLController">
    <top>
       <HBox prefHeight="179.0" prefWidth="800.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
@@ -149,11 +155,11 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </HBox>
-                        <HBox fx:id="txtOpstina" layoutX="15.0" layoutY="30.0" prefHeight="35.0" prefWidth="387.0" spacing="5.0">
+                        <HBox layoutX="15.0" layoutY="30.0" prefHeight="35.0" prefWidth="387.0" spacing="5.0">
                            <children>
                               <Label prefHeight="21.0" prefWidth="64.0" text="Opština:" />
                               <Pane prefHeight="25.0" prefWidth="172.0" />
-                              <TextField prefHeight="25.0" prefWidth="187.0" />
+                              <TextField fx:id="txtOpstina" prefHeight="25.0" prefWidth="187.0" />
                            </children>
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -169,6 +175,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </HBox>
+                        <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Sačuvaj podatke" />
                      </children>
                      <padding>
                         <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
