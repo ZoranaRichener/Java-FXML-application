@@ -235,7 +235,7 @@ public class KalkulacijaFXMLController implements Initializable {
             tablice=4000;
         }
         if(cbSaobracajna.isSelected()){
-            tablice=5000;
+            saobracajna=5000;
         }
         cena=(kvotaOpstine(cbOpstina.getValue())*kvotaVozila(cbVozilo.getValue())*kvotaGodista(cbGodiste.getValue())*
                 kvotaZapremine(cbZapremina.getValue())*kvotaSnageMot(cbSnagaMotora.getValue()))*50+premSt+saobracajna+tablice+10000;
