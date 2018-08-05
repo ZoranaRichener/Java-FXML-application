@@ -13,6 +13,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -85,6 +87,48 @@ public class KalkulacijaFXMLController implements Initializable {
     
     @FXML
     void handleCalculateBtn(ActionEvent event) {
+         if (cbOpstina.getValue() == null) {
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("");
+                alert.setContentText("Unesite opštinu!!");
+                alert.showAndWait();
+            }
+   
+         if (cbVozilo.getValue() == null) {
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("");
+                alert.setContentText("Unesite vrstu vozila!!");
+                alert.showAndWait();
+            }
+         
+           if (cbGodiste.getValue() == null) {
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("");
+                alert.setContentText("Unesite godište!!");
+                alert.showAndWait();
+            }
+           if (cbSnagaMotora.getValue() == null) {
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("");
+                alert.setContentText("Unesite snagu motora!!");
+                alert.showAndWait();
+            }
+         if (cbZapremina.getValue() == null) {
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Information Dialog");
+                alert.setHeaderText("");
+                alert.setContentText("Unesite zapreminu!!");
+                alert.showAndWait();
+            }
         txtFieldIzracuanvanja.setText(izracunajCenuReg());
         
 

@@ -38,7 +38,7 @@
                            <children>
                               <HBox prefHeight="70.0" prefWidth="292.0">
                                  <children>
-                                    <Label prefHeight="52.0" prefWidth="42.0" text="Ime" HBox.hgrow="ALWAYS" />
+                                    <Label prefHeight="52.0" prefWidth="42.0" text="Ime:" HBox.hgrow="ALWAYS" />
                                     <Pane prefHeight="60.0" prefWidth="121.0" />
                                     <TextField fx:id="txtIme" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
@@ -52,7 +52,7 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="292.0">
                                  <children>
-                                    <Label prefHeight="52.0" prefWidth="71.0" text="Prezime" HBox.hgrow="ALWAYS" />
+                                    <Label prefHeight="52.0" prefWidth="71.0" text="Prezime:" HBox.hgrow="ALWAYS" />
                                     <Pane prefHeight="60.0" prefWidth="121.0" />
                                     <TextField fx:id="txtPrezime" prefHeight="25.0" prefWidth="162.0" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
@@ -77,7 +77,7 @@
                                        <children>
                                           <HBox prefHeight="72.0" prefWidth="292.0">
                                              <children>
-                                                <Label prefHeight="42.0" prefWidth="91.0" text="JMBG" HBox.hgrow="ALWAYS">
+                                                <Label prefHeight="42.0" prefWidth="91.0" text="JMBG:" HBox.hgrow="ALWAYS">
                                                    <HBox.margin>
                                                       <Insets left="10.0" top="20.0" />
                                                    </HBox.margin>
@@ -92,7 +92,7 @@
                                           </HBox>
                                           <HBox layoutX="10.0" layoutY="10.0" prefHeight="72.0" prefWidth="292.0">
                                              <children>
-                                                <Label prefHeight="42.0" prefWidth="101.0" text="Broj licne karte" HBox.hgrow="ALWAYS">
+                                                <Label prefHeight="42.0" prefWidth="101.0" text="Broj lične karte:" HBox.hgrow="ALWAYS">
                                                    <HBox.margin>
                                                       <Insets left="10.0" top="20.0" />
                                                    </HBox.margin>
@@ -141,7 +141,7 @@
                      <children>
                         <HBox prefHeight="44.0" prefWidth="387.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="20.0" prefWidth="60.0" text="Adresa" />
+                              <Label prefHeight="20.0" prefWidth="60.0" text="Adresa:" />
                               <Pane prefHeight="31.0" prefWidth="157.0" />
                               <TextField fx:id="txtAdresa" prefHeight="25.0" prefWidth="173.0" />
                            </children>
@@ -151,9 +151,9 @@
                         </HBox>
                         <HBox fx:id="txtOpstina" layoutX="15.0" layoutY="30.0" prefHeight="35.0" prefWidth="387.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="21.0" prefWidth="59.0" text="Opstina" />
-                              <Pane prefHeight="24.0" prefWidth="186.0" />
-                              <TextField prefHeight="25.0" prefWidth="186.0" />
+                              <Label prefHeight="21.0" prefWidth="64.0" text="Opština:" />
+                              <Pane prefHeight="25.0" prefWidth="172.0" />
+                              <TextField prefHeight="25.0" prefWidth="187.0" />
                            </children>
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -161,7 +161,7 @@
                         </HBox>
                         <HBox layoutX="15.0" layoutY="89.0" prefHeight="44.0" prefWidth="387.0" spacing="5.0">
                            <children>
-                              <Label prefHeight="32.0" prefWidth="134.0" text="Broj mobilnog" />
+                              <Label prefHeight="32.0" prefWidth="134.0" text="Broj mobilnog:" />
                               <Pane prefHeight="25.0" prefWidth="101.0" />
                               <TextField fx:id="txtBrojMobilnog" prefHeight="25.0" prefWidth="182.0" />
                            </children>

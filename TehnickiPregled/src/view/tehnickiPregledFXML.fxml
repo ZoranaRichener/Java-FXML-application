@@ -19,7 +19,7 @@
                <children>
                   <HBox prefHeight="28.0" prefWidth="499.0" style="-fx-background-color: #FAD1A3;">
                      <children>
-                        <Label text="Naziv firme" HBox.hgrow="ALWAYS">
+                        <Label text="Naziv firme:" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -34,7 +34,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="499.0" style="-fx-background-color: #FAD1A3;">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="83.0" text="Sedsite firme" HBox.hgrow="ALWAYS">
+                        <Label prefHeight="20.0" prefWidth="83.0" text="Sedšite firme:" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -49,7 +49,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="38.0" prefHeight="28.0" prefWidth="499.0" style="-fx-background-color: #FAD1A3;">
                      <children>
-                        <Label text="Kontrolor 1" HBox.hgrow="ALWAYS">
+                        <Label text="Kontrolor 1:" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -64,7 +64,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="66.0" prefHeight="28.0" prefWidth="499.0" style="-fx-background-color: #FAD1A3;">
                      <children>
-                        <Label text="Kontrolor 2" HBox.hgrow="ALWAYS">
+                        <Label text="Kontrolor 2:" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -83,7 +83,7 @@
                <children>
                   <HBox prefHeight="49.0" prefWidth="290.0" style="-fx-background-color: #DBBBA4;" VBox.vgrow="ALWAYS">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="116.0" text="Sifra teh.pregleda">
+                        <Label prefHeight="17.0" prefWidth="116.0" text="Šifra teh.pregleda:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -113,7 +113,7 @@
                <children>
                   <HBox prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="175.0" text="Uslovi za vrsenje pregleda">
+                        <Label prefHeight="17.0" prefWidth="175.0" text="Uslovi za vršenje pregleda:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -128,7 +128,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="184.0" text="Mesto vrsenja pregleda">
+                        <Label prefHeight="20.0" prefWidth="184.0" text="Mesto vršenja pregleda:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -143,7 +143,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="49.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="142.0" text="Vrsta pregleda">
+                        <Label prefHeight="17.0" prefWidth="142.0" text="Vrsta pregleda:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -158,7 +158,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="88.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="97.0" text="Redni broj">
+                        <Label prefHeight="17.0" prefWidth="97.0" text="Redni broj:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -173,7 +173,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="127.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="60.0" text="ID broj">
+                        <Label prefHeight="17.0" prefWidth="60.0" text="ID broj:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -188,7 +188,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="166.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="20.0" prefWidth="141.0" text="Vrsta vozila">
+                        <Label prefHeight="20.0" prefWidth="141.0" text="Vrsta vozila:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -203,7 +203,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="205.0" prefHeight="39.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="141.0" text="Ispravnost vozila">
+                        <Label prefHeight="17.0" prefWidth="141.0" text="Ispravnost vozila:">
                            <HBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </HBox.margin>
@@ -232,7 +232,7 @@
                      <children>
                         <VBox prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #81CEBC;" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label alignment="CENTER" text="Datum pregleda" VBox.vgrow="ALWAYS">
+                              <Label alignment="CENTER" text="Datum pregleda:" VBox.vgrow="ALWAYS">
                                  <VBox.margin>
                                     <Insets left="20.0" top="10.0" />
                                  </VBox.margin>
@@ -246,7 +246,7 @@
                         </VBox>
                         <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #81CEBC;" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label alignment="CENTER" text="Pocetak pregleda" VBox.vgrow="ALWAYS">
+                              <Label alignment="CENTER" text="Početak pregleda:" VBox.vgrow="ALWAYS">
                                  <VBox.margin>
                                     <Insets left="20.0" top="10.0" />
                                  </VBox.margin>
@@ -260,7 +260,7 @@
                         </VBox>
                         <VBox layoutX="140.0" layoutY="10.0" prefHeight="100.0" prefWidth="130.0" style="-fx-background-color: #81CEBC;" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label alignment="CENTER" text="Zavrsetak pregleda" VBox.vgrow="ALWAYS">
+                              <Label alignment="CENTER" text="Završetak pregleda:" VBox.vgrow="ALWAYS">
                                  <VBox.margin>
                                     <Insets left="20.0" top="10.0" />
                                  </VBox.margin>

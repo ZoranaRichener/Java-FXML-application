@@ -15,7 +15,7 @@
          <children>
             <HBox prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="138.0" text="Marka vozila">
+                  <Label prefHeight="27.0" prefWidth="138.0" text="Marka vozila:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -32,7 +32,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="113.0" text="Model vozila">
+                  <Label prefHeight="27.0" prefWidth="113.0" text="Model vozila:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -46,7 +46,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="47.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="96.0" text="Tip vozila">
+                  <Label prefHeight="27.0" prefWidth="96.0" text="Tip vozila:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -60,7 +60,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="84.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="106.0" text="Broj sasije">
+                  <Label prefHeight="27.0" prefWidth="106.0" text="Broj sasije:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -74,7 +74,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="121.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;" VBox.vgrow="ALWAYS">
                <children>
-                  <Label prefHeight="27.0" prefWidth="120.0" text="Broj motora">
+                  <Label prefHeight="27.0" prefWidth="120.0" text="Broj motora:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -88,7 +88,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="158.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="137.0" text="Snaga motora">
+                  <Label prefHeight="27.0" prefWidth="137.0" text="Snaga motora:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -102,7 +102,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="195.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="174.0" text="Zapremina motora">
+                  <Label prefHeight="27.0" prefWidth="174.0" text="Zapremina motora:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -116,7 +116,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="232.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="165.0" text="Godina proizvodnje">
+                  <Label prefHeight="27.0" prefWidth="165.0" text="Godina proizvodnje:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -130,7 +130,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="269.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="164.0" text="Zemlja proizvodnje">
+                  <Label prefHeight="27.0" prefWidth="164.0" text="Zemlja proizvodnje:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -144,7 +144,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="306.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="167.0" text="Dozvoljena nosivost">
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Dozvoljena nosivost:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -158,7 +158,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="343.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="170.0" text="Masa praznog vozila">
+                  <Label prefHeight="27.0" prefWidth="170.0" text="Masa praznog vozila:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -172,7 +172,7 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="380.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
                <children>
-                  <Label prefHeight="27.0" prefWidth="167.0" text="Najveca dozvoljena masa">
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Najveca dozvoljena masa:">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -198,7 +198,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Sifra poslednjeg tehnickog pregleda">
+                        <Label prefHeight="17.0" prefWidth="199.0" text="Sifra poslednjeg tehnickog pregleda">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
@@ -211,12 +211,12 @@
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Datum poslednjeg tehničkog">
+                        <Label text="Datum poslednjeg tehničkog:">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
                         </Label>
-                        <DatePicker fx:id="datePDatumPoslenjegTehnickog" VBox.vgrow="ALWAYS" />
+                        <DatePicker fx:id="datePDatumPoslenjegTehnickog" prefHeight="25.0" prefWidth="174.0" VBox.vgrow="ALWAYS" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -229,7 +229,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Label prefHeight="17.0" prefWidth="197.0" text="Datum isteka saobracajne dozvole" />
+                  <Label prefHeight="17.0" prefWidth="197.0" text="Datum isteka saobracajne dozvole:" />
                   <Pane prefHeight="25.0" prefWidth="0.0" />
                   <DatePicker fx:id="datePDatumIstekaSaobracajne" prefHeight="25.0" prefWidth="169.0" />
                </children>
@@ -238,7 +238,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Broj mesta za sedenje">
+                        <Label text="Broj mesta za sedenje:">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
@@ -251,7 +251,7 @@
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Broj mesta za stajanje">
+                        <Label text="Broj mesta za stajanje:">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
@@ -268,7 +268,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Boja vozila">
+                        <Label text="Boja vozila:">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
@@ -281,7 +281,7 @@
                   </VBox>
                   <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label text="Vrsta boje">
+                        <Label text="Vrsta boje:">
                            <VBox.margin>
                               <Insets left="5.0" top="5.0" />
                            </VBox.margin>
@@ -296,7 +296,7 @@
             </HBox>
             <HBox prefHeight="35.0" prefWidth="327.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="99.0" text="Vrsta goriva" />
+                  <Label prefHeight="17.0" prefWidth="99.0" text="Vrsta goriva:" />
                   <Pane prefHeight="25.0" prefWidth="101.0" />
                   <TextField fx:id="txtVrstaGoriva" prefHeight="25.0" prefWidth="190.0" />
                </children>
@@ -306,7 +306,7 @@
             </HBox>
             <HBox layoutX="15.0" layoutY="262.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="101.0" text="Predjeni put" />
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Predjeni put:" />
                   <Pane prefHeight="25.0" prefWidth="101.0" />
                   <TextField fx:id="txtPredjeniPut" prefHeight="25.0" prefWidth="191.0" />
                </children>
@@ -316,7 +316,7 @@
             </HBox>
             <HBox layoutX="15.0" layoutY="302.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="101.0" text="Kuka" />
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Kuka:" />
                   <Pane prefHeight="25.0" prefWidth="100.0" />
                   <TextField fx:id="txtKuka" prefHeight="25.0" prefWidth="186.0" />
                </children>
@@ -326,7 +326,7 @@
             </HBox>
             <HBox layoutX="15.0" layoutY="342.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="98.0" text="Broj osovina" />
+                  <Label prefHeight="17.0" prefWidth="98.0" text="Broj osovina:" />
                   <Pane prefHeight="25.0" prefWidth="132.0" />
                   <TextField fx:id="txtBrojOsovina" prefHeight="25.0" prefWidth="199.0" />
                </children>
@@ -336,7 +336,7 @@
             </HBox>
             <HBox layoutX="15.0" layoutY="382.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
                <children>
-                  <Label prefHeight="17.0" prefWidth="133.0" text="Osnovna namena" />
+                  <Label prefHeight="17.0" prefWidth="133.0" text="Osnovna namena:" />
                   <Pane prefHeight="25.0" prefWidth="104.0" />
                   <TextField fx:id="txtOsnovnaNamena" prefHeight="25.0" prefWidth="205.0" />
                </children>
@@ -348,7 +348,7 @@
                <children>
                   <Pane prefHeight="59.0" prefWidth="223.0">
                      <children>
-                        <Button fx:id="btnSnimiVozilo" layoutX="92.0" layoutY="17.0" mnemonicParsing="false" text="Snimi " />
+                        <Button fx:id="btnSnimiVozilo" layoutX="92.0" layoutY="17.0" mnemonicParsing="false" text="Sačuvaj" />
                      </children></Pane>
                   <Button fx:id="btnPronadjiVoziloAMSkatalog" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Ponadji vozilo u AMS katalogu">
                      <padding>
