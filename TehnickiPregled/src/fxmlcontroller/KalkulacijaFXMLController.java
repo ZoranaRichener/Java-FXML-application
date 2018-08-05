@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -23,6 +24,8 @@ import javafx.scene.control.Label;
  * @author Lenovo
  */
 public class KalkulacijaFXMLController implements Initializable {
+    @FXML
+    private TextField txtFieldIzracuanvanja;
 
    @FXML
     private ComboBox<String> cbOpstina;
@@ -74,10 +77,15 @@ public class KalkulacijaFXMLController implements Initializable {
 
     @FXML
     private Button btnCalculate;
-
-    //hendler za Izracunaj dugme 
+    
+    
+    
+        //hendler za Izracunaj dugme 
+    
     @FXML
     void handleCalculateBtn(ActionEvent event) {
+        txtFieldIzracuanvanja.setText(izracunajCenuReg());
+        
 
     }
 
@@ -116,5 +124,126 @@ public class KalkulacijaFXMLController implements Initializable {
      public void cbZapreminaChanage(ActionEvent event){
       lblZapremina.setText(cbZapremina.getValue().toString());
     }
-
+    
+    public int kvotaOpstine(String opstina){
+        int kvota=0;
+        
+        if(cbOpstina.getValue().equals("Beogarg")){
+            kvota=5;
+        }else if(cbOpstina.getValue().equals("Novi Sad")){
+            kvota=4;
+        }else if(cbOpstina.getValue().equals("Nis")){
+            kvota=3;
+        }else if(cbOpstina.getValue().equals("Sabac")){
+            kvota=2;
+        }else{
+            kvota=1;
+        }
+        return kvota;
+    }
+    
+    public int kvotaVozila(String vozila){
+        int kvota=0;
+        
+        if(cbOpstina.getValue().equals("Teretno")){
+            kvota=6;
+        }else if(cbOpstina.getValue().equals("Autobus")){
+            kvota=5;
+        }else if(cbOpstina.getValue().equals("Tegljac")){
+            kvota=4;
+        }else if(cbOpstina.getValue().equals("Putnicko")){
+            kvota=3;
+        }else if(cbOpstina.getValue().equals("Motorcikl")){
+            kvota=2;
+        }else{
+            kvota=1;
+        }
+        return kvota;
+   }
+    
+    public int kvotaGodista(Integer god){
+       int kvota=0;
+        int godiste=cbGodiste.getValue();
+        
+        if(godiste>=1999 && godiste<=2003){
+            kvota =1;
+        }else if(godiste>2003 && godiste<=2007){
+        kvota=2;
+    }else if(godiste>2007 && godiste<=2011){
+        kvota=3;
+    }else if(godiste>2011 && godiste<=2015){
+        kvota=4;
+    }else if(godiste>2015 && godiste<=2017){
+        kvota=5;
+    }else{
+        kvota =6;
+    }
+        return kvota;
+        
+    }
+    
+    public int kvotaZapremine(Integer zap){
+        int kvota=0;
+        int zapremina=cbZapremina.getValue();
+        
+        if(zapremina>=1 && zapremina<=30){
+            kvota =1;
+        }else if(zapremina>30 && zapremina<=60){
+            kvota = 2;
+        }else if(zapremina>60 && zapremina<=90){
+            kvota =3;
+        }else if(zapremina>90 && zapremina<=120){
+            kvota = 4;
+        }else if(zapremina>120 && zapremina<=150){
+            kvota = 5;
+        }else{
+            kvota =6;
+        }
+        return kvota;
+    }
+    public int kvotaSnageMot(Integer snaga){
+        int kvota=0;
+        int snagaM=cbSnagaMotora.getValue();
+        
+         if(snagaM>=1 && snagaM<=30){
+            kvota =1;
+        }else if(snagaM>30 && snagaM<=60){
+            kvota = 2;
+        }else if(snagaM>60 && snagaM<=90){
+            kvota =3;
+        }else if(snagaM>90 && snagaM<=120){
+            kvota = 4;
+        }else if(snagaM>120 && snagaM<=150){
+            kvota = 5;
+        }else{
+            kvota =6;
+        }
+        return kvota;
+        
+    }
+    
+    public String izracunajCenuReg(){
+        int cena=0;
+        int premSt=0;
+        int saobracajna=0;
+        int tablice=0;
+        
+        if(cbPremijskiStepen.isSelected()){
+            premSt=3000;
+        }
+        if(cbTablice.isSelected()){
+            tablice=4000;
+        }
+        if(cbSaobracajna.isSelected()){
+            tablice=5000;
+        }
+        cena=(kvotaOpstine(cbOpstina.getValue())*kvotaVozila(cbVozilo.getValue())*kvotaGodista(cbGodiste.getValue())*
+                kvotaZapremine(cbZapremina.getValue())*kvotaSnageMot(cbSnagaMotora.getValue()))*50+premSt+saobracajna+tablice;
+        
+        return cena+" dinara";
+        
+    }
+    
+            
+    
 }
