@@ -35,9 +35,9 @@
                   </HBox>
                   <HBox prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="57.0" text="Opstina" />
+                        <Label prefHeight="17.0" prefWidth="57.0" text="Opština:" />
                         <Pane prefHeight="25.0" prefWidth="64.0" />
-                        <ComboBox fx:id="cbOpstina" onAction="#cbOpstinaChange" prefWidth="150.0" promptText="Izaberi Opstinu" />
+                        <ComboBox fx:id="cbOpstina" onAction="#cbOpstinaChange" prefWidth="150.0" promptText="Izaberi Opštinu" />
                         <Pane prefHeight="25.0" prefWidth="18.0" />
                         <Label fx:id="lblOpstina" prefHeight="18.0" prefWidth="61.0" />
                      </children>
@@ -47,7 +47,7 @@
                   </HBox>
                   <HBox layoutX="15.0" layoutY="64.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="66.0" text="Vrsta vozila" />
+                        <Label prefHeight="17.0" prefWidth="66.0" text="Vrsta vozila:" />
                         <Pane prefHeight="25.0" prefWidth="53.0" />
                         <ComboBox fx:id="cbVozilo" onAction="#cbVoziloChange" prefWidth="150.0" promptText="Izaberi vozilo" />
                         <Pane prefHeight="25.0" prefWidth="11.0" />
@@ -59,7 +59,7 @@
                   </HBox>
                   <HBox layoutX="15.0" layoutY="114.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="76.0" text="Godiste:" />
+                        <Label prefHeight="17.0" prefWidth="76.0" text="Godište:" />
                         <Pane prefHeight="25.0" prefWidth="42.0" />
                         <ComboBox fx:id="cbGodiste" onAction="#cbGodisteChanage" prefWidth="150.0" promptText="Izaberi godište" />
                         <Pane prefHeight="25.0" prefWidth="9.0" />
@@ -73,7 +73,7 @@
                      <children>
                         <Label prefHeight="17.0" prefWidth="118.0" text="Snaga motora u KW:" />
                         <Pane prefHeight="25.0" prefWidth="1.0" />
-                        <ComboBox fx:id="cbSnagaMotora" prefWidth="150.0" promptText="Izaberi snagu" />
+                        <ComboBox fx:id="cbSnagaMotora" onAction="#cbSnagaMotoraChanage" prefWidth="150.0" promptText="Izaberi snagu" />
                         <Pane prefHeight="25.0" prefWidth="10.0" />
                         <Label fx:id="lblSnagaMotora" />
                      </children>
@@ -85,7 +85,7 @@
                      <children>
                         <Label text="Zapremina:" />
                         <Pane prefHeight="25.0" prefWidth="58.0" />
-                        <ComboBox fx:id="cbZapremina" prefWidth="150.0" promptText="Izaberi zapreminu" />
+                        <ComboBox fx:id="cbZapremina" onAction="#cbZapreminaChanage" prefWidth="150.0" promptText="Izaberi zapreminu" />
                         <Pane prefHeight="25.0" prefWidth="8.0" />
                         <Label fx:id="lblZapremina" />
                      </children>
@@ -124,7 +124,7 @@
                         <Label prefHeight="17.0" prefWidth="89.0" text="Saobracajna:" />
                         <Pane prefHeight="21.0" prefWidth="31.0" />
                         <Pane prefHeight="21.0" prefWidth="10.0" />
-                        <CheckBox fx:id="cbSaobracajna" mnemonicParsing="false" text="CheckBox" />
+                        <CheckBox fx:id="cbSaobracajna" mnemonicParsing="false" text="Saobraćajna" />
                         <Pane prefHeight="22.0" prefWidth="33.0" />
                         <Label fx:id="lblSaobracajna" />
                      </children>
@@ -137,7 +137,7 @@
                         <Label prefHeight="17.0" prefWidth="57.0" text="Tablice:" />
                         <Pane prefHeight="25.0" prefWidth="64.0" />
                         <Pane prefHeight="21.0" prefWidth="12.0" />
-                        <CheckBox fx:id="cbTablice" mnemonicParsing="false" text="CheckBox" />
+                        <CheckBox fx:id="cbTablice" mnemonicParsing="false" text="Tablice" />
                         <Pane prefHeight="19.0" prefWidth="29.0" />
                         <Label fx:id="lblTablice" />
                      </children>
@@ -150,7 +150,7 @@
                         <Label prefHeight="17.0" prefWidth="109.0" text="Premijski stepen:" />
                         <Pane prefHeight="22.0" prefWidth="7.0" />
                         <Pane prefHeight="25.0" prefWidth="18.0" />
-                        <CheckBox fx:id="cbPremijskiStepen" mnemonicParsing="false" text="CheckBox" />
+                        <CheckBox fx:id="cbPremijskiStepen" mnemonicParsing="false" text="Premijski stepen" />
                         <Pane prefHeight="19.0" prefWidth="29.0" />
                         <Label fx:id="lblPremijskiStepen" />
                      </children>
@@ -162,7 +162,7 @@
                   <HBox prefHeight="117.0" prefWidth="402.0" spacing="5.0" style="-fx-background-color: #F5E58E;">
                      <children>
                         <Pane prefHeight="91.0" prefWidth="304.0" />
-                        <Button fx:id="btnCalculate" mnemonicParsing="false" onAction="#handleCalculateBtn" prefHeight="58.0" prefWidth="112.0" text="Izracunaj">
+                        <Button fx:id="btnCalculate" mnemonicParsing="false" onAction="#handleCalculateBtn" prefHeight="58.0" prefWidth="112.0" text="Izračunaj">
                            <HBox.margin>
                               <Insets top="25.0" />
                            </HBox.margin>

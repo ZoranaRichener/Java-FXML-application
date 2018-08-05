@@ -108,7 +108,13 @@ public class KalkulacijaFXMLController implements Initializable {
       lblVozilo.setText(cbVozilo.getValue());
     }
     public void cbGodisteChanage(ActionEvent event){
-      lblGodiste.setText(cbGodiste.getClass().toString());
+      lblGodiste.setText(cbGodiste.getValue().toString());
+    }
+    public void cbSnagaMotoraChanage(ActionEvent event){
+      lblSnagaMotora.setText(cbSnagaMotora.getValue().toString());
+    }
+     public void cbZapreminaChanage(ActionEvent event){
+      lblZapremina.setText(cbZapremina.getValue().toString());
     }
 
 }
