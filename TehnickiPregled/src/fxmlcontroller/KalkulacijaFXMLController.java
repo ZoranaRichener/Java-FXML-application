@@ -6,6 +6,7 @@
 package fxmlcontroller;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -89,12 +90,27 @@ public class KalkulacijaFXMLController implements Initializable {
 
     }
 
-    ObservableList<String> listaOpstina = FXCollections.observableArrayList("Beograg", "Nis", "Novi Sad", "Indjija", "Sabac");
+    ObservableList<String> listaOpstina = FXCollections.observableArrayList("Beograd", "Nis", "Novi Sad", "Indjija", "Sabac");
     ObservableList<String> listaVozila = FXCollections.observableArrayList("Putnicko", "Teretno", "Motorcikl", "Prikljucno vozilo", "Tegljac", "Autobus");
     ObservableList<Integer> listaGodista = FXCollections.observableArrayList(1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018);
-    ObservableList<Integer> listaZapremina = FXCollections.observableArrayList(1, 2, 3, 5, 6, 7, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167);
-    ObservableList<Integer> listaSnagaMotora = FXCollections.observableArrayList(1, 2, 3, 5, 6, 7, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167);
+    ObservableList<Integer> listaZapremina = FXCollections.observableArrayList(br());
+    //lista sa 500 brojeva
+    ObservableList<Integer> listaSnagaMotora = FXCollections.observableArrayList(br());
 
+   
+  
+     //metoda za dodavanje 500 broeva u listu
+    public ArrayList<Integer> br() {
+        ArrayList<Integer> brojevi = new ArrayList();
+        for (int i = 0; i < 500; i++) {
+            brojevi.add(i);
+        }
+        return brojevi;
+    }
+
+
+     
+     
     /**
      * Initializes the controller class.
      */
@@ -128,7 +144,7 @@ public class KalkulacijaFXMLController implements Initializable {
     public int kvotaOpstine(String opstina){
         int kvota=0;
         
-        if(cbOpstina.getValue().equals("Beogarg")){
+        if(cbOpstina.getValue().equals("Beogard")){
             kvota=5;
         }else if(cbOpstina.getValue().equals("Novi Sad")){
             kvota=4;
@@ -186,15 +202,15 @@ public class KalkulacijaFXMLController implements Initializable {
         int kvota=0;
         int zapremina=cbZapremina.getValue();
         
-        if(zapremina>=1 && zapremina<=30){
+        if(zapremina>=1 && zapremina<=50){
             kvota =1;
-        }else if(zapremina>30 && zapremina<=60){
+        }else if(zapremina>=50 && zapremina<=100){
             kvota = 2;
-        }else if(zapremina>60 && zapremina<=90){
+        }else if(zapremina>100 && zapremina<=200){
             kvota =3;
-        }else if(zapremina>90 && zapremina<=120){
+        }else if(zapremina>200 && zapremina<=300){
             kvota = 4;
-        }else if(zapremina>120 && zapremina<=150){
+        }else if(zapremina>300 && zapremina<=400){
             kvota = 5;
         }else{
             kvota =6;
@@ -205,15 +221,15 @@ public class KalkulacijaFXMLController implements Initializable {
         int kvota=0;
         int snagaM=cbSnagaMotora.getValue();
         
-         if(snagaM>=1 && snagaM<=30){
+         if(snagaM>=1 && snagaM<=50){
             kvota =1;
-        }else if(snagaM>30 && snagaM<=60){
+        }else if(snagaM>50 && snagaM<=100){
             kvota = 2;
-        }else if(snagaM>60 && snagaM<=90){
+        }else if(snagaM>100 && snagaM<=200){
             kvota =3;
-        }else if(snagaM>90 && snagaM<=120){
+        }else if(snagaM>200 && snagaM<=300){
             kvota = 4;
-        }else if(snagaM>120 && snagaM<=150){
+        }else if(snagaM>300 && snagaM<=400){
             kvota = 5;
         }else{
             kvota =6;
