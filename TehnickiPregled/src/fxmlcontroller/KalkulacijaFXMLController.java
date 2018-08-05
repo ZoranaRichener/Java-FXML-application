@@ -128,13 +128,13 @@ public class KalkulacijaFXMLController implements Initializable {
     public int kvotaOpstine(String opstina){
         int kvota=0;
         
-        if(cbOpstina.getValue().equals("Beogarg")){
+        if(cbVozilo.getValue().equals("Beogarg")){
             kvota=5;
-        }else if(cbOpstina.getValue().equals("Novi Sad")){
+        }else if(cbVozilo.getValue().equals("Novi Sad")){
             kvota=4;
-        }else if(cbOpstina.getValue().equals("Nis")){
+        }else if(cbVozilo.getValue().equals("Nis")){
             kvota=3;
-        }else if(cbOpstina.getValue().equals("Sabac")){
+        }else if(cbVozilo.getValue().equals("Sabac")){
             kvota=2;
         }else{
             kvota=1;
@@ -238,7 +238,7 @@ public class KalkulacijaFXMLController implements Initializable {
             tablice=5000;
         }
         cena=(kvotaOpstine(cbOpstina.getValue())*kvotaVozila(cbVozilo.getValue())*kvotaGodista(cbGodiste.getValue())*
-                kvotaZapremine(cbZapremina.getValue())*kvotaSnageMot(cbSnagaMotora.getValue()))*50+premSt+saobracajna+tablice;
+                kvotaZapremine(cbZapremina.getValue())*kvotaSnageMot(cbSnagaMotora.getValue()))*50+premSt+saobracajna+tablice+10000;
         
         return cena+" dinara";
         
