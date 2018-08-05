@@ -128,13 +128,13 @@ public class KalkulacijaFXMLController implements Initializable {
     public int kvotaOpstine(String opstina){
         int kvota=0;
         
-        if(cbVozilo.getValue().equals("Beogarg")){
+        if(cbOpstina.getValue().equals("Beogarg")){
             kvota=5;
-        }else if(cbVozilo.getValue().equals("Novi Sad")){
+        }else if(cbOpstina.getValue().equals("Novi Sad")){
             kvota=4;
-        }else if(cbVozilo.getValue().equals("Nis")){
+        }else if(cbOpstina.getValue().equals("Nis")){
             kvota=3;
-        }else if(cbVozilo.getValue().equals("Sabac")){
+        }else if(cbOpstina.getValue().equals("Sabac")){
             kvota=2;
         }else{
             kvota=1;
@@ -145,15 +145,15 @@ public class KalkulacijaFXMLController implements Initializable {
     public int kvotaVozila(String vozila){
         int kvota=0;
         
-        if(cbOpstina.getValue().equals("Teretno")){
+        if(cbVozilo.getValue().equals("Teretno")){
             kvota=6;
-        }else if(cbOpstina.getValue().equals("Autobus")){
+        }else if(cbVozilo.getValue().equals("Autobus")){
             kvota=5;
-        }else if(cbOpstina.getValue().equals("Tegljac")){
+        }else if(cbVozilo.getValue().equals("Tegljac")){
             kvota=4;
-        }else if(cbOpstina.getValue().equals("Putnicko")){
+        }else if(cbVozilo.getValue().equals("Putnicko")){
             kvota=3;
-        }else if(cbOpstina.getValue().equals("Motorcikl")){
+        }else if(cbVozilo.getValue().equals("Motorcikl")){
             kvota=2;
         }else{
             kvota=1;
