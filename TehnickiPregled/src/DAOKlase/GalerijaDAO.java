@@ -37,4 +37,10 @@ public class GalerijaDAO {
     public Galerija getGalerijaById(int galerijaID) {
         return galerijaController.findGalerija(galerijaID);
     }
+    
+    public int galerijaCount () {
+        
+        return galerijaController.getGalerijaCount();
+    }
+    
 }

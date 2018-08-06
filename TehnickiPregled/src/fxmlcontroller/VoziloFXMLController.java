@@ -74,7 +74,10 @@ public class VoziloFXMLController implements Initializable {
 
     @FXML
     private DatePicker datePDatumIstekaSaobracajne;
-
+    
+    @FXML
+    private DatePicker datePDatumPrvaReg;
+    
     @FXML
     private TextField txtBrojMestaZaSedenje;
 
@@ -170,12 +173,22 @@ public class VoziloFXMLController implements Initializable {
                 Date date1 = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
                 noviVozilo.setDatumPoslednjegTehnickog(date1);
-
+                
+                
                 LocalDate localDate2 = datePDatumIstekaSaobracajne.getValue();
 
                 Date date2 = Date.from(localDate2.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
                 noviVozilo.setDatumIstekaSaobracajne(date2);
+                
+                
+                LocalDate localDate3 = datePDatumPrvaReg.getValue();
+
+                Date date3 = Date.from(localDate3.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+                noviVozilo.setDatumPrveRegistracije(date3);
+                
+                
 
                 try {
                     voziloDAO.addVozilo(noviVozilo);

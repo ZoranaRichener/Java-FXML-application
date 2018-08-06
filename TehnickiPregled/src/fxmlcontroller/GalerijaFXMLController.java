@@ -8,9 +8,11 @@ package fxmlcontroller;
 import DAOKlase.GalerijaDAO;
 import entiteti.Galerija;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -26,6 +28,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
 import javafx.stage.FileChooser;
 import javax.imageio.ImageIO;
 import static sun.rmi.registry.RegistryImpl.getID;
@@ -123,10 +126,51 @@ public class GalerijaFXMLController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+//      System.out.println(galerijaDAO.getAllGalerija());
+//      System.out.println(galerijaDAO.galerijaCount());
+        TilePane tilePane = new TilePane();
+
+        tilePane.setHgap(5);
+        tilePane.setVgap(5);
+        tilePane.setMaxWidth(200);
+
+        List<Galerija> allGalerija = galerijaDAO.getAllGalerija();
+
+        for (Galerija galerija : allGalerija) {
+
+            try {
+
+                byte[] byteImg = galerija.getSlika();
+
+                ByteArrayInputStream byteInput = new ByteArrayInputStream(byteImg);
+
+                BufferedImage myImage = ImageIO.read(byteInput);
+
+                Image image1 = SwingFXUtils.toFXImage(myImage, null);
+
+                ImageView imgView = new ImageView(image1);
+
+                imgView.setFitHeight(200);
+
+                imgView.setFitWidth(200);
+
+                imgView.setPreserveRatio(true);
+
+                tilePane.getChildren().addAll(imgView);
+            } catch (IOException ex) {
+                Logger.getLogger(GalerijaFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        scrollPane.setContent(tilePane);
+
     }
 
     private int getID() {
