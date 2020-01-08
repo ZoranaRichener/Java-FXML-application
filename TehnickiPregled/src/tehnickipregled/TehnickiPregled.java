@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Owner
+ * @author Lenovo
  */
 public class TehnickiPregled extends Application {
     

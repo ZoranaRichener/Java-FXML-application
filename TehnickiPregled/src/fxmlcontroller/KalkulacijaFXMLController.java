@@ -27,10 +27,11 @@ import javafx.scene.control.TextField;
  * @author Lenovo
  */
 public class KalkulacijaFXMLController implements Initializable {
+
     @FXML
     private TextField txtFieldIzracuanvanja;
 
-   @FXML
+    @FXML
     private ComboBox<String> cbOpstina;
 
     @FXML
@@ -80,57 +81,53 @@ public class KalkulacijaFXMLController implements Initializable {
 
     @FXML
     private Button btnCalculate;
-    
-    
-    
-        //hendler za Izracunaj dugme 
-    
+
+    //hendler za Izracunaj dugme 
     @FXML
     void handleCalculateBtn(ActionEvent event) {
-         if (cbOpstina.getValue() == null) {
+        if (cbOpstina.getValue() == null) {
 
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("");
-                alert.setContentText("Unesite opštinu!!");
-                alert.showAndWait();
-            }
-   
-         if (cbVozilo.getValue() == null) {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("");
+            alert.setContentText("Unesite opštinu!!");
+            alert.showAndWait();
+        }
 
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("");
-                alert.setContentText("Unesite vrstu vozila!!");
-                alert.showAndWait();
-            }
-         
-           if (cbGodiste.getValue() == null) {
+        if (cbVozilo.getValue() == null) {
 
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("");
-                alert.setContentText("Unesite godište!!");
-                alert.showAndWait();
-            }
-           if (cbSnagaMotora.getValue() == null) {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("");
+            alert.setContentText("Unesite vrstu vozila!!");
+            alert.showAndWait();
+        }
 
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("");
-                alert.setContentText("Unesite snagu motora!!");
-                alert.showAndWait();
-            }
-         if (cbZapremina.getValue() == null) {
+        if (cbGodiste.getValue() == null) {
 
-                Alert alert = new Alert(AlertType.INFORMATION);
-                alert.setTitle("Information Dialog");
-                alert.setHeaderText("");
-                alert.setContentText("Unesite zapreminu!!");
-                alert.showAndWait();
-            }
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("");
+            alert.setContentText("Unesite godište!!");
+            alert.showAndWait();
+        }
+        if (cbSnagaMotora.getValue() == null) {
+
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("");
+            alert.setContentText("Unesite snagu motora!!");
+            alert.showAndWait();
+        }
+        if (cbZapremina.getValue() == null) {
+
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("");
+            alert.setContentText("Unesite zapreminu!!");
+            alert.showAndWait();
+        }
         txtFieldIzracuanvanja.setText(izracunajCenuReg());
-        
 
     }
 
@@ -141,9 +138,7 @@ public class KalkulacijaFXMLController implements Initializable {
     //lista sa 500 brojeva
     ObservableList<Integer> listaSnagaMotora = FXCollections.observableArrayList(br());
 
-   
-  
-     //metoda za dodavanje 500 broeva u listu
+    //metoda za dodavanje 500 broeva u listu
     public ArrayList<Integer> br() {
         ArrayList<Integer> brojevi = new ArrayList();
         for (int i = 0; i < 500; i++) {
@@ -152,9 +147,6 @@ public class KalkulacijaFXMLController implements Initializable {
         return brojevi;
     }
 
-
-     
-     
     /**
      * Initializes the controller class.
      */
@@ -167,143 +159,178 @@ public class KalkulacijaFXMLController implements Initializable {
         cbSnagaMotora.setItems(listaSnagaMotora);
 
     }
-    
-    public void cbOpstinaChange(ActionEvent event){
-      lblOpstina.setText(cbOpstina.getValue());
+
+    public void cbOpstinaChange(ActionEvent event) {
+        lblOpstina.setText(cbOpstina.getValue());
     }
-    
-    public void cbVoziloChange(ActionEvent event){
-      lblVozilo.setText(cbVozilo.getValue());
+
+    public void cbVoziloChange(ActionEvent event) {
+        lblVozilo.setText(cbVozilo.getValue());
     }
-    public void cbGodisteChanage(ActionEvent event){
-      lblGodiste.setText(cbGodiste.getValue().toString());
+
+    public void cbGodisteChanage(ActionEvent event) {
+        lblGodiste.setText(cbGodiste.getValue().toString());
     }
-    public void cbSnagaMotoraChanage(ActionEvent event){
-      lblSnagaMotora.setText(cbSnagaMotora.getValue().toString());
+
+    public void cbSnagaMotoraChanage(ActionEvent event) {
+        lblSnagaMotora.setText(cbSnagaMotora.getValue().toString());
     }
-     public void cbZapreminaChanage(ActionEvent event){
-      lblZapremina.setText(cbZapremina.getValue().toString());
+
+    public void cbZapreminaChanage(ActionEvent event) {
+        lblZapremina.setText(cbZapremina.getValue().toString());
     }
-    
-    public int kvotaOpstine(String opstina){
-        int kvota=0;
-        
-        if(cbOpstina.getValue().equals("Beogard")){
-            kvota=5;
-        }else if(cbOpstina.getValue().equals("Novi Sad")){
-            kvota=4;
-        }else if(cbOpstina.getValue().equals("Nis")){
-            kvota=3;
-        }else if(cbOpstina.getValue().equals("Sabac")){
-            kvota=2;
-        }else{
-            kvota=1;
-        }
-        return kvota;
-    }
-    
-    public int kvotaVozila(String vozila){
-        int kvota=0;
-        
-        if(cbVozilo.getValue().equals("Teretno")){
-            kvota=6;
-        }else if(cbVozilo.getValue().equals("Autobus")){
-            kvota=5;
-        }else if(cbVozilo.getValue().equals("Tegljac")){
-            kvota=4;
-        }else if(cbVozilo.getValue().equals("Putnicko")){
-            kvota=3;
-        }else if(cbVozilo.getValue().equals("Motorcikl")){
-            kvota=2;
-        }else{
-            kvota=1;
-        }
-        return kvota;
-   }
-    
-    public int kvotaGodista(Integer god){
-       int kvota=0;
-        int godiste=cbGodiste.getValue();
-        
-        if(godiste>=1999 && godiste<=2003){
-            kvota =1;
-        }else if(godiste>2003 && godiste<=2007){
-        kvota=2;
-    }else if(godiste>2007 && godiste<=2011){
-        kvota=3;
-    }else if(godiste>2011 && godiste<=2015){
-        kvota=4;
-    }else if(godiste>2015 && godiste<=2017){
-        kvota=5;
-    }else{
-        kvota =6;
-    }
-        return kvota;
-        
-    }
-    
-    public int kvotaZapremine(Integer zap){
-        int kvota=0;
-        int zapremina=cbZapremina.getValue();
-        
-        if(zapremina>=1 && zapremina<=50){
-            kvota =1;
-        }else if(zapremina>=50 && zapremina<=100){
-            kvota = 2;
-        }else if(zapremina>100 && zapremina<=200){
-            kvota =3;
-        }else if(zapremina>200 && zapremina<=300){
-            kvota = 4;
-        }else if(zapremina>300 && zapremina<=400){
+
+    public int kvotaOpstine(String opstina) {
+        int kvota = 0;
+
+        if (cbOpstina.getValue().equals("Beograd")) {
             kvota = 5;
-        }else{
-            kvota =6;
-        }
-        return kvota;
-    }
-    public int kvotaSnageMot(Integer snaga){
-        int kvota=0;
-        int snagaM=cbSnagaMotora.getValue();
-        
-         if(snagaM>=1 && snagaM<=50){
-            kvota =1;
-        }else if(snagaM>50 && snagaM<=100){
-            kvota = 2;
-        }else if(snagaM>100 && snagaM<=200){
-            kvota =3;
-        }else if(snagaM>200 && snagaM<=300){
+        } else if (cbOpstina.getValue().equals("Novi Sad")) {
             kvota = 4;
-        }else if(snagaM>300 && snagaM<=400){
-            kvota = 5;
-        }else{
-            kvota =6;
+        } else if (cbOpstina.getValue().equals("Nis")) {
+            kvota = 3;
+        } else if (cbOpstina.getValue().equals("Sabac")) {
+            kvota = 2;
+        } else {
+            kvota = 1;
         }
         return kvota;
-        
+    }
+
+//    public int kvotaVozila(String vozila) {
+//        int kvota = 0;
+//
+//       
+//        if (cbVozilo.getValue().equals("Teretno")) {
+//            kvota = 6;
+//        } else if (cbVozilo.getValue().equals("Autobus")) {
+//            kvota = 5;
+//        } else if (cbVozilo.getValue().equals("Tegljac")) {
+//            kvota = 4;
+//        } else if (cbVozilo.getValue().equals("Putnicko")) {
+//            kvota = 3;
+//        } else if (cbVozilo.getValue().equals("Motorcikl")) {
+//            kvota = 2;
+//        } else {
+//            kvota = 1;
+//        }
+//        return kvota;
+//    }
+//    
+    
+    public int kvotaVozila(String vozila) {
+        int kvota = 0;
+
+        switch (cbVozilo.getValue()) {
+            case "Teretno":
+                kvota = 6;
+                break;
+            case "Autobus":
+                kvota = 5;
+                break;
+            case "Tegljac":
+                kvota = 4;
+                break;
+            case "Putnicko":
+                kvota = 3;
+                break;
+            case "Motorcikl":
+                kvota = 2;
+                break;
+            case "Prikljucno vozilo":
+                kvota = 1;
+
+        }
+        return kvota;
     }
     
-    public String izracunajCenuReg(){
-        int cena=0;
-        int premSt=0;
-        int saobracajna=0;
-        int tablice=0;
-        
-        if(cbPremijskiStepen.isSelected()){
-            premSt=3000;
+
+    public int kvotaGodista(Integer god) {
+        int kvota = 0;
+        int godiste = cbGodiste.getValue();
+
+        if (godiste >= 1999 && godiste <= 2003) {
+            kvota = 1;
+        } else if (godiste > 2003 && godiste <= 2007) {
+            kvota = 2;
+        } else if (godiste > 2007 && godiste <= 2011) {
+            kvota = 3;
+        } else if (godiste > 2011 && godiste <= 2015) {
+            kvota = 4;
+        } else if (godiste > 2015 && godiste <= 2017) {
+            kvota = 5;
+        } else {
+            kvota = 6;
         }
-        if(cbTablice.isSelected()){
-            tablice=4000;
-        }
-        if(cbSaobracajna.isSelected()){
-            saobracajna=5000;
-        }
-        cena=(kvotaOpstine(cbOpstina.getValue())*kvotaVozila(cbVozilo.getValue())*kvotaGodista(cbGodiste.getValue())*
-                kvotaZapremine(cbZapremina.getValue())*kvotaSnageMot(cbSnagaMotora.getValue()))*50+premSt+saobracajna+tablice+10000;
-        
-        return cena+" dinara";
-        
+        return kvota;
+
     }
-    
-            
-    
+
+    public int kvotaZapremine(Integer zap) {
+        int kvota = 0;
+        int zapremina = cbZapremina.getValue();
+
+        if (zapremina >= 1 && zapremina <= 50) {
+            kvota = 1;
+        } else if (zapremina >= 50 && zapremina <= 100) {
+            kvota = 2;
+        } else if (zapremina > 100 && zapremina <= 200) {
+            kvota = 3;
+        } else if (zapremina > 200 && zapremina <= 300) {
+            kvota = 4;
+        } else if (zapremina > 300 && zapremina <= 400) {
+            kvota = 5;
+        } else {
+            kvota = 6;
+        }
+        return kvota;
+    }
+
+    public int kvotaSnageMot(Integer snaga) {
+        int kvota = 0;
+        int snagaM = cbSnagaMotora.getValue();
+
+        if (snagaM >= 1 && snagaM <= 50) {
+            kvota = 1;
+        } else if (snagaM > 50 && snagaM <= 100) {
+            kvota = 2;
+        } else if (snagaM > 100 && snagaM <= 200) {
+            kvota = 3;
+        } else if (snagaM > 200 && snagaM <= 300) {
+            kvota = 4;
+        } else if (snagaM > 300 && snagaM <= 400) {
+            kvota = 5;
+        } else {
+            kvota = 6;
+        }
+        return kvota;
+
+    }
+
+    public String izracunajCenuReg() {
+        int cena = 0;
+        int premSt = 0;
+        int saobracajna = 0;
+        int tablice = 0;
+
+        if (cbPremijskiStepen.isSelected()) {
+            premSt = 3000;
+        }
+        if (cbTablice.isSelected()) {
+            tablice = 4000;
+        }
+        if (cbSaobracajna.isSelected()) {
+            saobracajna = 5000;
+        }
+        cena = (kvotaOpstine(cbOpstina.getValue())
+                * kvotaVozila(cbVozilo.getValue())
+                * kvotaGodista(cbGodiste.getValue())
+                * kvotaZapremine(cbZapremina.getValue())
+                * kvotaSnageMot(cbSnagaMotora.getValue()))
+                * 50 + premSt + saobracajna + tablice + 10000;
+
+        return cena + " dinara";
+
+    }
+
 }

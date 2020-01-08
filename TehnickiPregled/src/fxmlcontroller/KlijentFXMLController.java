@@ -16,6 +16,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -63,8 +65,7 @@ public class KlijentFXMLController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
 
-                
-
+                  
                     Klijent noviKlijent = new Klijent(getID());
 
                     noviKlijent.setIme(txtIme.getText());
@@ -80,9 +81,26 @@ public class KlijentFXMLController implements Initializable {
                     noviKlijent.setOpstina(txtOpstina.getText());
 
                     noviKlijent.setBrojMobilnog(txtBrojMobilnog.getText());
+                    
+                  //  Alert alert = new Alert(AlertType.CONFIRMATION);
+          //  alert.setTitle("Podaci su uspesno sacuvani");
+          //  alert.setHeaderText("Look, a Confirmation Dialog");
+           // alert.setContentText("Are you ok with this?");
 
                     try {
                         klijentDAO.addKlijent(noviKlijent);
+                        
+                         Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Obavestenje ");
+                alert.setHeaderText("");
+                alert.setContentText("Podaci su uspesno sacuvani u bazi");
+                alert.showAndWait();
+                        
+                       // Alert alert = new Alert(AlertType.CONFIRMATION);
+           // alert.setTitle("Podaci su uspesno sacuvani");
+          //  alert.setHeaderText("Look, a Confirmation Dialog");
+           // alert.setContentText("Are you ok with this?");
+                      
                     } catch (Exception ex) {
                         Logger.getLogger(TehnickiPregledFXMLController.class.getName()).log(Level.SEVERE, null, ex);
                     }

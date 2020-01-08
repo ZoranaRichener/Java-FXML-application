@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -192,6 +193,13 @@ public class VoziloFXMLController implements Initializable {
 
                 try {
                     voziloDAO.addVozilo(noviVozilo);
+                    
+                      Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavestenje ");
+                alert.setHeaderText("");
+                alert.setContentText("Podaci O vozilu su uspesno sacuvani u bazi");
+                alert.showAndWait();
+                    
                 } catch (Exception ex) {
                     Logger.getLogger(TehnickiPregledFXMLController.class.getName()).log(Level.SEVERE, null, ex);
                 }

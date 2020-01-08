@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Owner
+ * @author Lenovo
  */
 @Entity
 @Table(name = "tehnicki_pregled")

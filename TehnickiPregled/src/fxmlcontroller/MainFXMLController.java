@@ -15,7 +15,7 @@ import javafx.scene.control.Tab;
 
 /**
  *
- * @author Owner
+ * @author Lenovo
  */
 public class MainFXMLController implements Initializable {
     

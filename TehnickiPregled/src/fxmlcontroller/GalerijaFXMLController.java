@@ -22,6 +22,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -88,6 +89,11 @@ public class GalerijaFXMLController implements Initializable {
 
         try {
             galerijaDAO.addGalerija(novagalerija);
+             Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavestenje ");
+                alert.setHeaderText("");
+                alert.setContentText("Podaci su uspesno sacuvani u bazi");
+                alert.show();
         } catch (Exception ex) {
             Logger.getLogger(TehnickiPregledFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }

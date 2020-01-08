@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #AB5F61;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlcontroller.VoziloFXMLController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #E3CD9D;" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="138.0" text="Marka vozila:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="87.0" />
+                  <TextField fx:id="txtMarkaVozila" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="113.0" text="Model vozila:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="113.0" />
+                  <TextField fx:id="tztModelVozila" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="47.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="96.0" text="Tip vozila:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="132.0" />
+                  <TextField fx:id="txtTipVozila" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="84.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="106.0" text="Broj sasije:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="123.0" />
+                  <TextField fx:id="txtBrojSasije" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="121.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="120.0" text="Broj motora:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="112.0" />
+                  <TextField fx:id="txtBrojMotora" prefHeight="25.0" prefWidth="180.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="158.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="137.0" text="Snaga motora:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="98.0" />
+                  <TextField fx:id="txtSnagaMotora" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="195.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="174.0" text="Zapremina motora:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="66.0" />
+                  <TextField fx:id="txtZapreminaMotora" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="232.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="165.0" text="Godina proizvodnje:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="72.0" />
+                  <TextField fx:id="txtGodinaProizvodnje" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="269.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="164.0" text="Zemlja proizvodnje:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="75.0" />
+                  <TextField fx:id="txtZemljaProizvodnje" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="306.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Dozvoljena nosivost:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="70.0" />
+                  <TextField fx:id="txtDozvoljenaNosivost" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="343.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="170.0" text="Masa praznog vozila:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="67.0" />
+                  <TextField fx:id="txtMasaPraznogVozila" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="380.0" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #DBBBA4;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Najveca dozvoljena masa:">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="27.0" prefWidth="67.0" />
+                  <TextField fx:id="txtNajvecaDozvoljenaMasa" prefHeight="25.0" prefWidth="180.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #F5E58E;" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <HBox prefHeight="64.0" prefWidth="407.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="199.0" text="Sifra poslednjeg tehnickog pregleda">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtSifraPoslednjegTehnickog" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Datum poslednjeg tehničkog:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <DatePicker fx:id="datePDatumPoslenjegTehnickog" prefHeight="25.0" prefWidth="174.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="75.0" prefWidth="407.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="189.0" text="Datum prve registracije:" />
+                  <DatePicker fx:id="datePDatumPrvaReg" prefHeight="25.0" prefWidth="169.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="197.0" text="Datum isteka saobracajne dozvole:" />
+                  <Pane prefHeight="25.0" prefWidth="0.0" />
+                  <DatePicker fx:id="datePDatumIstekaSaobracajne" prefHeight="25.0" prefWidth="169.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="64.0" prefWidth="407.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Broj mesta za sedenje:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtBrojMestaZaSedenje" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Broj mesta za stajanje:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtBrojMestaStajanje" prefHeight="25.0" prefWidth="166.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="64.0" prefWidth="407.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Boja vozila:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtBojaVozila" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Vrsta boje:">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtVrstaBoje" prefHeight="25.0" prefWidth="166.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="327.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="99.0" text="Vrsta goriva:" />
+                  <Pane prefHeight="25.0" prefWidth="101.0" />
+                  <TextField fx:id="txtVrstaGoriva" prefHeight="25.0" prefWidth="190.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="262.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Predjeni put:" />
+                  <Pane prefHeight="25.0" prefWidth="101.0" />
+                  <TextField fx:id="txtPredjeniPut" prefHeight="25.0" prefWidth="191.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="302.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="101.0" text="Kuka:" />
+                  <Pane prefHeight="25.0" prefWidth="100.0" />
+                  <TextField fx:id="txtKuka" prefHeight="25.0" prefWidth="186.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="342.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="98.0" text="Broj osovina:" />
+                  <Pane prefHeight="25.0" prefWidth="132.0" />
+                  <TextField fx:id="txtBrojOsovina" prefHeight="25.0" prefWidth="199.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="15.0" layoutY="382.0" prefHeight="29.0" prefWidth="407.0" spacing="5.0" style="-fx-background-color: #FAD1A3;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="133.0" text="Osnovna namena:" />
+                  <Pane prefHeight="25.0" prefWidth="104.0" />
+                  <TextField fx:id="txtOsnovnaNamena" prefHeight="25.0" prefWidth="205.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #81CEBC;">
+               <children>
+                  <Pane prefHeight="59.0" prefWidth="223.0">
+                     <children>
+                        <Button fx:id="btnSnimiVozilo" layoutX="92.0" layoutY="17.0" mnemonicParsing="false" text="Sačuvaj" />
+                     </children></Pane>
+                  <Button fx:id="btnPronadjiVoziloAMSkatalog" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Ponadji vozilo u AMS katalogu">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

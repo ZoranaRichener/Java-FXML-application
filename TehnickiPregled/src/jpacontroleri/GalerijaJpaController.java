@@ -20,7 +20,7 @@ import jpacontroleri.exceptions.NonexistentEntityException;
 
 /**
  *
- * @author Owner
+ * @author Lenovo
  */
 public class GalerijaJpaController implements Serializable {
 

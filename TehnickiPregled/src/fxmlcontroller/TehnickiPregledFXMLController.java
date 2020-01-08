@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
@@ -141,6 +142,11 @@ public class TehnickiPregledFXMLController implements Initializable {
                    
                   try {
                         tehnickiPregledDAO.addTehnickiPregled(novitehPregled);
+                          Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Obavestenje ");
+                alert.setHeaderText("");
+                alert.setContentText("Podaci o tehnickom pregledu su uspesno sacuvani u bazi");
+                alert.showAndWait();
                     } catch (Exception ex) {
                         Logger.getLogger(TehnickiPregledFXMLController.class.getName()).log(Level.SEVERE, null, ex);
                     }

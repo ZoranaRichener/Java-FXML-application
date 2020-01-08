@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="850.0" style="-fx-background-color: #AB5F61;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlcontroller.KalkulacijaFXMLController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #E3CD9D;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="44.0" prefWidth="420.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label text="Osnovni podaci">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="57.0" text="Opština:" />
+                        <Pane prefHeight="25.0" prefWidth="64.0" />
+                        <ComboBox fx:id="cbOpstina" onAction="#cbOpstinaChange" prefWidth="150.0" promptText="Izaberi Opštinu" />
+                        <Pane prefHeight="25.0" prefWidth="18.0" />
+                        <Label fx:id="lblOpstina" prefHeight="18.0" prefWidth="61.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="64.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="66.0" text="Vrsta vozila:" />
+                        <Pane prefHeight="25.0" prefWidth="53.0" />
+                        <ComboBox fx:id="cbVozilo" onAction="#cbVoziloChange" prefWidth="150.0" promptText="Izaberi vozilo" />
+                        <Pane prefHeight="25.0" prefWidth="11.0" />
+                        <Label fx:id="lblVozilo" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="114.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="76.0" text="Godište:" />
+                        <Pane prefHeight="25.0" prefWidth="42.0" />
+                        <ComboBox fx:id="cbGodiste" onAction="#cbGodisteChanage" prefWidth="150.0" promptText="Izaberi godište" />
+                        <Pane prefHeight="25.0" prefWidth="9.0" />
+                        <Label fx:id="lblGodiste" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="164.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="118.0" text="Snaga motora u KW:" />
+                        <Pane prefHeight="25.0" prefWidth="1.0" />
+                        <ComboBox fx:id="cbSnagaMotora" onAction="#cbSnagaMotoraChanage" prefWidth="150.0" promptText="Izaberi snagu" />
+                        <Pane prefHeight="25.0" prefWidth="10.0" />
+                        <Label fx:id="lblSnagaMotora" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="214.0" prefHeight="42.0" prefWidth="410.0" spacing="5.0" style="-fx-background-color: #DBBBA4;">
+                     <children>
+                        <Label text="Zapremina:" />
+                        <Pane prefHeight="25.0" prefWidth="58.0" />
+                        <ComboBox fx:id="cbZapremina" onAction="#cbZapreminaChanage" prefWidth="150.0" promptText="Izaberi zapreminu" />
+                        <Pane prefHeight="25.0" prefWidth="8.0" />
+                        <Label fx:id="lblZapremina" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DBBBA4;" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: #DBBBA4;" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <HBox prefHeight="44.0" prefWidth="420.0" style="-fx-background-color: #E3CD9D;">
+                     <children>
+                        <Label text="Dodatni podaci">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="64.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #E3CD9D;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="89.0" text="Saobracajna:" />
+                        <Pane prefHeight="21.0" prefWidth="31.0" />
+                        <Pane prefHeight="21.0" prefWidth="10.0" />
+                        <CheckBox fx:id="cbSaobracajna" mnemonicParsing="false" text="Saobraćajna" />
+                        <Pane prefHeight="22.0" prefWidth="33.0" />
+                        <Label fx:id="lblSaobracajna" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="114.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #E3CD9D;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="57.0" text="Tablice:" />
+                        <Pane prefHeight="25.0" prefWidth="64.0" />
+                        <Pane prefHeight="21.0" prefWidth="12.0" />
+                        <CheckBox fx:id="cbTablice" mnemonicParsing="false" text="Tablice" />
+                        <Pane prefHeight="19.0" prefWidth="29.0" />
+                        <Label fx:id="lblTablice" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="111.0" prefHeight="42.0" prefWidth="418.0" spacing="5.0" style="-fx-background-color: #E3CD9D;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="109.0" text="Premijski stepen:" />
+                        <Pane prefHeight="22.0" prefWidth="7.0" />
+                        <Pane prefHeight="25.0" prefWidth="18.0" />
+                        <CheckBox fx:id="cbPremijskiStepen" mnemonicParsing="false" text="Premijski stepen" />
+                        <Pane prefHeight="19.0" prefWidth="29.0" />
+                        <Label fx:id="lblPremijskiStepen" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Pane prefHeight="119.0" prefWidth="402.0" />
+                  <HBox prefHeight="117.0" prefWidth="402.0" spacing="5.0" style="-fx-background-color: #F5E58E;">
+                     <children>
+                        <Pane prefHeight="91.0" prefWidth="304.0">
+                           <children>
+                              <TextField fx:id="txtFieldIzracuanvanja" layoutX="74.0" layoutY="46.0" promptText="cena" />
+                           </children></Pane>
+                        <Button fx:id="btnCalculate" mnemonicParsing="false" onAction="#handleCalculateBtn" prefHeight="58.0" prefWidth="112.0" text="Izračunaj">
+                           <HBox.margin>
+                              <Insets top="25.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <top>
+      <AnchorPane prefHeight="72.0" prefWidth="840.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="242.0" layoutY="19.0" text="Kalkulacija cene registracije vozila" textFill="#fcfcfc">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+</BorderPane>
